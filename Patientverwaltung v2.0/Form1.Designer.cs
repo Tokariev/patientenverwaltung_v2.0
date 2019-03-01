@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.LeftPanel = new System.Windows.Forms.Panel();
             this.SidePanel = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnNewPatient = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnTermine = new System.Windows.Forms.Button();
             this.btnPatienten = new System.Windows.Forms.Button();
@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.patientsControl = new Patientverwaltung_v2._0.PatientsControl();
             this.termineControl = new Patientverwaltung_v2._0.TermineControl();
+            this.addPatientControl = new Patientverwaltung_v2._0.AddPatientControl();
             this.LeftPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,7 +51,7 @@
             // 
             this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.LeftPanel.Controls.Add(this.SidePanel);
-            this.LeftPanel.Controls.Add(this.button4);
+            this.LeftPanel.Controls.Add(this.btnNewPatient);
             this.LeftPanel.Controls.Add(this.btnLogin);
             this.LeftPanel.Controls.Add(this.btnTermine);
             this.LeftPanel.Controls.Add(this.btnPatienten);
@@ -68,18 +69,19 @@
             this.SidePanel.Size = new System.Drawing.Size(10, 57);
             this.SidePanel.TabIndex = 3;
             // 
-            // button4
+            // btnNewPatient
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(12, 233);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(190, 57);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnNewPatient.FlatAppearance.BorderSize = 0;
+            this.btnNewPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewPatient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnNewPatient.ForeColor = System.Drawing.Color.White;
+            this.btnNewPatient.Location = new System.Drawing.Point(12, 233);
+            this.btnNewPatient.Name = "btnNewPatient";
+            this.btnNewPatient.Size = new System.Drawing.Size(190, 57);
+            this.btnNewPatient.TabIndex = 3;
+            this.btnNewPatient.Text = "New patient";
+            this.btnNewPatient.UseVisualStyleBackColor = true;
+            this.btnNewPatient.Click += new System.EventHandler(this.btnNewPatient_Click);
             // 
             // btnLogin
             // 
@@ -162,25 +164,33 @@
             // 
             // patientsControl
             // 
-            this.patientsControl.BackColor = System.Drawing.Color.DarkKhaki;
-            this.patientsControl.Location = new System.Drawing.Point(278, 170);
+            this.patientsControl.BackColor = System.Drawing.SystemColors.Control;
+            this.patientsControl.Location = new System.Drawing.Point(202, 151);
             this.patientsControl.Name = "patientsControl";
-            this.patientsControl.Size = new System.Drawing.Size(609, 387);
+            this.patientsControl.Size = new System.Drawing.Size(776, 434);
             this.patientsControl.TabIndex = 5;
             // 
             // termineControl
             // 
-            this.termineControl.BackColor = System.Drawing.Color.PeachPuff;
-            this.termineControl.Location = new System.Drawing.Point(297, 151);
+            this.termineControl.BackColor = System.Drawing.SystemColors.Control;
+            this.termineControl.Location = new System.Drawing.Point(202, 151);
             this.termineControl.Name = "termineControl";
-            this.termineControl.Size = new System.Drawing.Size(590, 372);
+            this.termineControl.Size = new System.Drawing.Size(776, 434);
             this.termineControl.TabIndex = 6;
+            // 
+            // addPatientControl
+            // 
+            this.addPatientControl.Location = new System.Drawing.Point(202, 151);
+            this.addPatientControl.Name = "addPatientControl";
+            this.addPatientControl.Size = new System.Drawing.Size(776, 434);
+            this.addPatientControl.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 585);
+            this.Controls.Add(this.addPatientControl);
             this.Controls.Add(this.termineControl);
             this.Controls.Add(this.patientsControl);
             this.Controls.Add(this.label1);
@@ -205,13 +215,14 @@
         private System.Windows.Forms.Button btnPatienten;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnNewPatient;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnTermine;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private PatientsControl patientsControl;
         private TermineControl termineControl;
+        private AddPatientControl addPatientControl;
     }
 }
 
