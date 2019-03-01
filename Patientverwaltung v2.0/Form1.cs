@@ -16,5 +16,19 @@ namespace Patientverwaltung_v2._0
         {
             InitializeComponent();
         }
+
+        private void btnPatienten_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnPatienten.Height;
+            SidePanel.Top = btnPatienten.Top;
+            patientsControl.BringToFront();
+        }
+
+        private void btnTermine_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnTermine.Height;
+            SidePanel.Top = btnTermine.Top;
+            termineControl.BringToFront();
+        }
     }
 }
